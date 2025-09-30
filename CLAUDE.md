@@ -8,6 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Tech Stack
 - **Frontend Framework**: Nuxt.js 4 (Vue 3)
+- **UI Components**: NuxtUI (@nuxt/ui)
 - **Build Tool**: Vite 7 (built into Nuxt 4)
 - **Language**: TypeScript
 - **Database**: Supabase (PostgreSQL)
@@ -115,6 +116,12 @@ Vercel offers native Supabase integration that automatically configures environm
 ### Adding New Pages
 Create `.vue` files in `app/pages/` directory. Nuxt auto-generates routes.
 
+### Using NuxtUI Components
+NuxtUI provides a comprehensive set of pre-built Vue components:
+- Components are auto-imported (e.g., `<UButton>`, `<UCard>`, `<UModal>`)
+- Follow the [NuxtUI documentation](https://ui.nuxt.com) for component usage
+- Components support theming and are fully accessible
+
 ### Adding Composables
 Create reusable logic in `composables/` directory with `use` prefix.
 
@@ -145,6 +152,7 @@ node --version  # Should be v20.19.0 or higher
 
 ## Additional Resources
 - [Nuxt Documentation](https://nuxt.com/docs)
+- [NuxtUI Documentation](https://ui.nuxt.com)
 - [Supabase Documentation](https://supabase.com/docs)
 - [Vercel Documentation](https://vercel.com/docs)
 - See `SETUP.md` for detailed setup instructions
