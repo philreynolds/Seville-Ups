@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+# Run lint-staged for incremental linting and TypeScript checking
+npx lint-staged
+
+# Run full TypeScript check on the entire project
+echo "🔍 Running TypeScript type checking on entire project..."
+npx vue-tsc --noEmit
+
+if [ $? -ne 0 ]; then
+  echo "❌ TypeScript errors found. Please fix them before committing."
+  exit 1
+fi
+
+echo "✅ All checks passed!"
